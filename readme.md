@@ -5,17 +5,17 @@ An NPM or Github Package for `mdaktari-db-models' to cater for both doc/patient 
 ## Build project
 
 ```sh
-npm run build
+yarn run build
 ```
 
 ## Test pacakge
 
 ```sh
-npm test
+yarn test
 ```
 
 ## Deploy package
 
 ```sh
-npm run deploy
+yarn run deploy
 ```
