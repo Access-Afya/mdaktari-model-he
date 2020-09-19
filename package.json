@@ -1,7 +1,7 @@
 {
-  "name": "typescript-package-starter",
-  "version": "1.1.0",
-  "description": "TypeScript boilerplate for NPM or Github Packages",
+  "name": "mdaktari-db-models",
+  "version": "0.1.0",
+  "description": "An NPM or Github Packages to cater for both doc/patient APIs and admin APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -13,13 +13,13 @@
     "typescript",
     "github packages",
     "npm packages",
-    "boilerplate"
+    "mdaktari"
   ],
-  "author": "Dale Nguyen",
+  "author": "Kyalo Kitili",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dalenguyen/typescript-package-starter.git"
+    "url": "git+https://github.com:trendpro/mdaktari-db-models.git"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
@@ -36,6 +36,6 @@
     "node": ">=8"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@dalenguyen"
+    "registry": "https://npm.pkg.github.com/@trendpro"
   }
 }

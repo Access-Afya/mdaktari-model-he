@@ -1,6 +1,6 @@
-# TypeScript Package Starter
+# mDaktari-db-models Package
 
-TypeScript boilerplate for NPM or Github Packages
+An NPM or Github Package for `mdaktari-db-models' to cater for both doc/patient APIs and admin APIs.
 
 ## Build project
 
