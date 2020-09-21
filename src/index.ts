@@ -1,19 +1,42 @@
 //
 
 // admin
-export const Admin = require("./db/models/admin/Admin");
-export const Organization = require("./db/models/admin/Organization");
-export const OrganizationAdmin = require("./db/models/admin/OrganizationAdmin");
+export const Admin = function (mongoose) {
+  require("./db/models/admin/Admin")(mongoose);
+};
+
+export const Organization = function (mongoose) {
+  require("./db/models/admin/Organization")(mongoose);
+};
+export const OrganizationAdmin = function (mongoose) {
+  require("./db/models/admin/OrganizationAdmin");
+};
 
 // others
-export const Consult = require("./db/models/Consult");
-export const Doctor = require("./db/models/Doctor");
-export const DoctorProfile = require("./db/models/DoctorProfile");
-export const PatientProfile = require("./db/models/PatientProfile");
-export const Payment = require("./db/models/Payment");
-export const Prescription = require("./db/models/Prescription");
-export const TestOrder = require("./db/models/TestOrder");
-export const User = require("./db/models/User");
+export const Consult = function (mongoose) {
+  require("./db/models/Consult")(mongoose);
+};
+export const Doctor = function (mongoose) {
+  require("./db/models/Doctor")(mongoose);
+};
+export const DoctorProfile = function (mongoose) {
+  require("./db/models/DoctorProfile")(mongoose);
+};
+export const PatientProfile = function (mongoose) {
+  require("./db/models/PatientProfile")(mongoose);
+};
+export const Payment = function (mongoose) {
+  require("./db/models/Payment")(mongoose);
+};
+export const Prescription = function (mongoose) {
+  require("./db/models/Prescription")(mongoose);
+};
+export const TestOrder = function (mongoose) {
+  require("./db/models/TestOrder")(mongoose);
+};
+export const User = function (mongoose) {
+  require("./db/models/User")(mongoose);
+};
 
 export const helloWorld = () => {
   return "Howdy!";
