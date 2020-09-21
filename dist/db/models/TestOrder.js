@@ -1,7 +1,7 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose = require("mongoose");
+// import mongoose = require("mongoose");
 var timestampPlugin = require("../plugins/timestamp");
+var mongoose = module.parent.exports.mongoose;
 var testOrderSchema = new mongoose.Schema({
     consultId: { type: mongoose.Schema.Types.ObjectId, ref: "Consult" },
     patientId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
@@ -15,5 +15,5 @@ var testOrderSchema = new mongoose.Schema({
 });
 testOrderSchema.plugin(timestampPlugin);
 var TestOrder = mongoose.model("TestOrder", testOrderSchema);
-exports = TestOrder;
+module.exports = TestOrder;
 //# sourceMappingURL=TestOrder.js.map

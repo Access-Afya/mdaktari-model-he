@@ -1,8 +1,8 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose = require("mongoose");
+// import mongoose = require("mongoose");
 var validator = require("validator");
 var timestampPlugin = require("../../plugins/timestamp");
+var mongoose = module.parent.exports.mongoose;
 var adminSchema = new mongoose.Schema({
     email: {
         type: String,
@@ -31,5 +31,5 @@ var adminSchema = new mongoose.Schema({
 });
 adminSchema.plugin(timestampPlugin);
 var Admin = mongoose.model("Admin", adminSchema);
-exports = Admin;
+module.exports = Admin;
 //# sourceMappingURL=Admin.js.map

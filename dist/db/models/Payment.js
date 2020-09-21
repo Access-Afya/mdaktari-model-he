@@ -1,7 +1,7 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose = require("mongoose");
+// import mongoose = require("mongoose");
 var timestampPlugin = require("../plugins/timestamp");
+var mongoose = module.parent.exports.mongoose;
 var paymentSchema = new mongoose.Schema({
     consultId: { type: mongoose.Schema.Types.ObjectId, ref: "Consult" },
     amount: { type: Number },
@@ -22,5 +22,5 @@ var paymentSchema = new mongoose.Schema({
 });
 paymentSchema.plugin(timestampPlugin);
 var Payment = mongoose.model("Payment", paymentSchema);
-exports = Payment;
+module.exports = Payment;
 //# sourceMappingURL=Payment.js.map

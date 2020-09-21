@@ -1,1 +1,2 @@
-export {};
+declare const TestOrder: any;
+export = TestOrder;

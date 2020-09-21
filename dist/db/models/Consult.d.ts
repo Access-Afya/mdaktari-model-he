@@ -1,1 +1,2 @@
-export {};
+declare const Consult: any;
+export = Consult;

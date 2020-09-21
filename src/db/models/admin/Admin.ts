@@ -1,7 +1,9 @@
 "use strict";
-import mongoose = require("mongoose");
+// import mongoose = require("mongoose");
 import validator = require("validator");
 import timestampPlugin = require("../../plugins/timestamp");
+
+const mongoose = module.parent.exports.mongoose;
 
 const adminSchema = new mongoose.Schema({
   email: {

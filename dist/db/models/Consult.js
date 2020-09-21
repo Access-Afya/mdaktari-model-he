@@ -1,7 +1,7 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose = require("mongoose");
+// import mongoose = require("mongoose");
 var timestampPlugin = require("../plugins/timestamp");
+var mongoose = module.parent.exports.mongoose;
 var consultSchema = new mongoose.Schema({
     patient: {
         type: mongoose.Schema.Types.ObjectId,
@@ -86,5 +86,5 @@ var consultSchema = new mongoose.Schema({
 });
 consultSchema.plugin(timestampPlugin);
 var Consult = mongoose.model("Consult", consultSchema);
-exports = Consult;
+module.exports = Consult;
 //# sourceMappingURL=Consult.js.map

@@ -1,4 +1,5 @@
 "use strict";
+//
 Object.defineProperty(exports, "__esModule", { value: true });
 // admin
 exports.Admin = require("./db/models/admin/Admin");
