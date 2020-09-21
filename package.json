@@ -1,6 +1,6 @@
 {
   "name": "mdaktari-db-models",
-  "version": "0.1.4.a",
+  "version": "0.1.6",
   "description": "An NPM or Github Packages to cater for both doc/patient APIs and admin APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
