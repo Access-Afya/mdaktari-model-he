@@ -42,4 +42,4 @@ const userSchema = new mongoose.Schema({
 
 userSchema.plugin(timestampPlugin);
 const User = mongoose.model("User", userSchema);
-exports = User;
+export = User;

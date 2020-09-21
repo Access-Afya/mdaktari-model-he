@@ -53,4 +53,4 @@ const doctorSchema = new mongoose.Schema({
 
 doctorSchema.plugin(timestampPlugin);
 const Doctor = mongoose.model("Doctor", doctorSchema);
-exports = Doctor;
+export = Doctor;

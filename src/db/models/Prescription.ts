@@ -19,4 +19,4 @@ const prescriptionSchema = new mongoose.Schema({
 
 prescriptionSchema.plugin(timestampPlugin);
 const Prescription = mongoose.model("Prescription", prescriptionSchema);
-exports = Prescription;
+export = Prescription;

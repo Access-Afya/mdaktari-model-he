@@ -45,4 +45,4 @@ const OrganizationAdmin = mongoose.model(
   "OrganizationAdmin",
   organizationAdminSchema
 );
-exports = OrganizationAdmin;
+export = OrganizationAdmin;

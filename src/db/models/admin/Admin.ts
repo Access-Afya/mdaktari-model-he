@@ -32,4 +32,4 @@ const adminSchema = new mongoose.Schema({
 
 adminSchema.plugin(timestampPlugin);
 const Admin = mongoose.model("Admin", adminSchema);
-exports = Admin;
+export = Admin;

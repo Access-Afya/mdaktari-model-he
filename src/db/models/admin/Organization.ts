@@ -35,4 +35,4 @@ const organizationSchema = new mongoose.Schema({
 
 organizationSchema.plugin(timestampPlugin);
 const Organization = mongoose.model("Organization", organizationSchema);
-exports = Organization;
+export = Organization;

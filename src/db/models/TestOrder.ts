@@ -16,4 +16,4 @@ const testOrderSchema = new mongoose.Schema({
 
 testOrderSchema.plugin(timestampPlugin);
 const TestOrder = mongoose.model("TestOrder", testOrderSchema);
-exports = TestOrder;
+export = TestOrder;

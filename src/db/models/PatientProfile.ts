@@ -37,4 +37,4 @@ const patientProfileSchema = new mongoose.Schema({
 
 patientProfileSchema.plugin(timestampPlugin);
 const PatientProfile = mongoose.model("PatientProfile", patientProfileSchema);
-exports = PatientProfile;
+export = PatientProfile;

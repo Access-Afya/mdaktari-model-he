@@ -89,4 +89,4 @@ const consultSchema = new mongoose.Schema({
 
 consultSchema.plugin(timestampPlugin);
 const Consult = mongoose.model("Consult", consultSchema);
-exports = Consult;
+export = Consult;
