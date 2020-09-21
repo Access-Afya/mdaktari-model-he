@@ -38,7 +38,7 @@ var consultSchema = new mongoose.Schema({
             "WaitingDoctor",
             "Ongoing",
             "Rescheduled",
-            "Complete",
+            "Completed",
             "Cancelled",
         ],
         default: "Pending",
