@@ -1,6 +1,6 @@
 "use strict";
-const mongoose = require("mongoose");
-const timestampPlugin = require("../plugins/timestamp");
+import mongoose = require("mongoose");
+import timestampPlugin = require("../plugins/timestamp");
 
 const testOrderSchema = new mongoose.Schema({
   consultId: { type: mongoose.Schema.Types.ObjectId, ref: "Consult" },
@@ -16,4 +16,4 @@ const testOrderSchema = new mongoose.Schema({
 
 testOrderSchema.plugin(timestampPlugin);
 const TestOrder = mongoose.model("TestOrder", testOrderSchema);
-module.exports = TestOrder;
+exports = TestOrder;

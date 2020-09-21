@@ -1,9 +1,9 @@
 "use strict";
-const mongoose = require("mongoose");
-const validator = require("validator");
-const timestampPlugin = require("../../plugins/timestamp");
+import mongoose = require("mongoose");
+import validator = require("validator");
+import timestampPlugin = require("../../plugins/timestamp");
 
-const adminSchema = new mongoose.Schema({
+const organizationAdminSchema = new mongoose.Schema({
   email: {
     type: String,
     required: false,
@@ -26,10 +26,23 @@ const adminSchema = new mongoose.Schema({
     enum: ["Active", "Disabled"],
     default: "Active",
   },
+  adminAccountType: {
+    type: String,
+    enum: ["Primary", "Secondary"],
+    default: "Primary",
+  },
+  organization: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Organization",
+    required: true,
+  },
   createdAt: { type: Date },
   updatedAt: { type: Date },
 });
 
-adminSchema.plugin(timestampPlugin);
-const Admin = mongoose.model("Admin", adminSchema);
-module.exports = Admin;
+organizationAdminSchema.plugin(timestampPlugin);
+const OrganizationAdmin = mongoose.model(
+  "OrganizationAdmin",
+  organizationAdminSchema
+);
+exports = OrganizationAdmin;

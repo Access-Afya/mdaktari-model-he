@@ -1,6 +1,6 @@
 "use strict";
-const mongoose = require("mongoose");
-const timestampPlugin = require("../plugins/timestamp");
+import mongoose = require("mongoose");
+import timestampPlugin = require("../plugins/timestamp");
 
 const consultSchema = new mongoose.Schema({
   patient: {
@@ -89,4 +89,4 @@ const consultSchema = new mongoose.Schema({
 
 consultSchema.plugin(timestampPlugin);
 const Consult = mongoose.model("Consult", consultSchema);
-module.exports = Consult;
+exports = Consult;

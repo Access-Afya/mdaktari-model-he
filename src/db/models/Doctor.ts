@@ -1,7 +1,7 @@
 "use strict";
-const mongoose = require("mongoose");
-const validator = require("validator");
-const timestampPlugin = require("../plugins/timestamp");
+import mongoose = require("mongoose");
+import validator = require("validator");
+import timestampPlugin = require("../plugins/timestamp");
 
 const doctorSchema = new mongoose.Schema({
   email: {
@@ -53,4 +53,4 @@ const doctorSchema = new mongoose.Schema({
 
 doctorSchema.plugin(timestampPlugin);
 const Doctor = mongoose.model("Doctor", doctorSchema);
-module.exports = Doctor;
+exports = Doctor;
