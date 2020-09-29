@@ -23,11 +23,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     enum: ["Male", "Female", "Other"],
   },
-  // accountType: {
-  //   type: String,
-  //   enum: ['Patient', 'Doctor', 'Admin'],
-  //   default: 'Patient',
-  // },
   accountStatus: {
     type: String,
     enum: ["Active", "Disabled"],
@@ -38,6 +33,9 @@ const userSchema = new mongoose.Schema({
     ref: "PatientProfile",
   },
   organization: { type: mongoose.Schema.Types.ObjectId, ref: "Organization" }, // TODO: Add this --> , required: true
+  membershipExpiry: { type: Date },
+  quota: { type: Number, min: 0, default: 0 },
+  consultsLimit: { type: Number, min: 0, default: 0 },
   createdAt: { type: Date },
   updatedAt: { type: Date },
 });
