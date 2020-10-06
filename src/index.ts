@@ -11,6 +11,7 @@ module.exports.mongoose = mongoose;
 export const Admin = require("./db/models/admin/Admin");
 export const Organization = require("./db/models/admin/Organization");
 export const OrganizationAdmin = require("./db/models/admin/OrganizationAdmin");
+export const Utilization = require("./db/models/admin/Utilization");
 
 // others
 export const Consult = require("./db/models/Consult");
