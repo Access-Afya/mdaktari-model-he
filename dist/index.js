@@ -9,6 +9,7 @@ module.exports.mongoose = mongoose;
 exports.Admin = require("./db/models/admin/Admin");
 exports.Organization = require("./db/models/admin/Organization");
 exports.OrganizationAdmin = require("./db/models/admin/OrganizationAdmin");
+exports.Utilization = require("./db/models/admin/Utilization");
 // others
 exports.Consult = require("./db/models/Consult");
 exports.Doctor = require("./db/models/Doctor");
