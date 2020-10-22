@@ -35,6 +35,12 @@ const consultSchema = new mongoose.Schema({
     enum: ["Pending", "Processing", "Success", "Failed"],
     default: "Pending",
   },
+  paymentMethod: {
+    type: String,
+    enum: ["Cash", "M-Pesa", "Organization"],
+    default: "Cash",
+  },
+  cashPaymentReceiptNumber: { type: String },
   consultStatus: {
     type: String,
     enum: [

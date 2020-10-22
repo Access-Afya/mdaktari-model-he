@@ -1,6 +1,7 @@
 export declare const Admin: any;
 export declare const Organization: any;
 export declare const OrganizationAdmin: any;
+export declare const Utilization: any;
 export declare const Consult: any;
 export declare const Doctor: any;
 export declare const DoctorProfile: any;
