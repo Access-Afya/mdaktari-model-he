@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
   firstName: { type: String },
   lastName: { type: String },
   dateOfBirth: { type: Date },
-  phoneNumber: { type: String, required: true, unique: true },
+  phoneNumber: { type: String, required: true, unique: true, minlength: 13, maxlength: 13, trim: true },
   otpCode: { type: String },
   gender: {
     type: String,
@@ -32,7 +32,7 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "PatientProfile",
   },
-  organization: { type: mongoose.Schema.Types.ObjectId, ref: "Organization" }, // TODO: Add this --> , required: true
+  organization: [{ type: mongoose.Schema.Types.ObjectId, ref: "Organization" }],
   membershipExpiry: { type: Date },
   quota: { type: Number, min: 0, default: 0 },
   consultsLimit: { type: Number, min: 0, default: 0 },

@@ -2,8 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // https://stackoverflow.com/questions/12632028/how-can-i-share-mongoose-models-between-2-apps/12846923
 var mongoose = module.parent.exports.mongoose;
-//
-console.log("module.parent.exports.mongoose-------A", module.parent.exports.mongoose);
 module.exports.mongoose = mongoose;
 // admin
 exports.Admin = require("./db/models/admin/Admin");
