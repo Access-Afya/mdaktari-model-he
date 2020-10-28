@@ -15,7 +15,8 @@ var organizationSchema = new mongoose.Schema({
     phone: { type: String, required: true },
     name: { type: String },
     logoUrl: { type: String },
-    quota: { type: Number },
+    quota: { type: Number, min: 0 },
+    consultCharges: { type: Number, min: 0, default: 300 },
     accountStatus: {
         type: String,
         enum: ["Active", "Disabled"],
