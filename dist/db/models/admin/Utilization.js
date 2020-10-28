@@ -5,8 +5,8 @@ var mongoose = module.parent.exports.mongoose;
 var utilizationSchema = new mongoose.Schema({
     paymentMethod: {
         type: String,
-        enum: ["SelfPay", "GroupSponsor"],
-        default: "SelfPay",
+        enum: ["Cash", "M-Pesa", "Organization"],
+        default: "Cash",
     },
     amount: { type: Number, min: 0, required: true },
     serviceType: {
