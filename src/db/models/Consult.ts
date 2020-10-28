@@ -41,6 +41,7 @@ const consultSchema = new mongoose.Schema({
     default: "Cash",
   },
   cashPaymentReceiptNumber: { type: String },
+  billedOrganization: { type: mongoose.Schema.Types.ObjectId, ref: "Organization" },
   consultStatus: {
     type: String,
     enum: [
