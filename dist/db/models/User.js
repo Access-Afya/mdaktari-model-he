@@ -54,7 +54,7 @@ var userSchema = new mongoose.Schema({
     updatedAt: { type: Date },
 });
 userSchema.plugin(timestampPlugin);
-userSchema.index({ '$**': 'text' });
+// userSchema.index({ '$**': 'text' });
 userSchema.plugin(mongoose_fuzzy_searching, { fields: ['firstName', 'lastName', 'email', 'phoneNumber'] });
 var User = mongoose.model("User", userSchema);
 module.exports = User;

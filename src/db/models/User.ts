@@ -57,7 +57,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.plugin(timestampPlugin);
-userSchema.index({ '$**': 'text' });
+// userSchema.index({ '$**': 'text' });
 userSchema.plugin(mongoose_fuzzy_searching, { fields: ['firstName', 'lastName', 'email', 'phoneNumber'] });
 
 const User = mongoose.model("User", userSchema);
