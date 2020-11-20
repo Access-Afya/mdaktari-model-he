@@ -2,6 +2,7 @@
 // import mongoose = require("mongoose");
 import validator = require("validator");
 import timestampPlugin = require("../plugins/timestamp");
+const mongoose_fuzzy_searching = require('mongoose-fuzzy-searching');
 
 const mongoose = module.parent.exports.mongoose;
 
@@ -57,5 +58,7 @@ const userSchema = new mongoose.Schema({
 
 userSchema.plugin(timestampPlugin);
 userSchema.index({ '$**': 'text' });
+userSchema.plugin(mongoose_fuzzy_searching, { fields: ['firstName', 'lastName', 'email', 'phoneNumber'] });
+
 const User = mongoose.model("User", userSchema);
 export = User;
