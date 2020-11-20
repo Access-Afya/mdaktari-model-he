@@ -56,5 +56,6 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.plugin(timestampPlugin);
+userSchema.index({ '$**': 'text' });
 const User = mongoose.model("User", userSchema);
 export = User;

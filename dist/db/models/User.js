@@ -53,6 +53,7 @@ var userSchema = new mongoose.Schema({
     updatedAt: { type: Date },
 });
 userSchema.plugin(timestampPlugin);
+userSchema.index({ '$**': 'text' });
 var User = mongoose.model("User", userSchema);
 module.exports = User;
 //# sourceMappingURL=User.js.map
