@@ -1,5 +1,5 @@
 {
-  "name": "@afya-access/mdaktari-db-models",
+  "name": "@Access-Afya/mdaktari-db-models",
   "version": "1.0.1-beta",
   "description": "An NPM or Github Packages to cater for both doc/patient APIs and admin APIs",
   "main": "dist/index.js",
