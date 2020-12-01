@@ -35,6 +35,7 @@ var userSchema = new mongoose.Schema({
     membershipExpiry: { type: Date },
     quota: { type: Number, min: 0, default: 0 },
     consultsLimit: { type: Number, min: 0, default: 0 },
+    utilization: { type: Number, min: 0, default: 0 },
     // csv start
     fullname: { type: String },
     chartId: { type: String },
