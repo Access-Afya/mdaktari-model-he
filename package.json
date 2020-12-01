@@ -1,6 +1,6 @@
 {
-  "name": "@Access-Afya/mdaktari-db-models",
-  "version": "1.0.1-beta",
+  "name": "@trendpro/mdaktari-db-models",
+  "version": "0.1.18",
   "description": "An NPM or Github Packages to cater for both doc/patient APIs and admin APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Access-Afya/mdaktari-db-models.git"
+    "url": "git+https://github.com:trendpro/mdaktari-db-models.git"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
@@ -41,6 +41,6 @@
     "node": ">=8"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/access-afya"
+    "registry": "https://npm.pkg.github.com/@trendpro"
   }
 }
