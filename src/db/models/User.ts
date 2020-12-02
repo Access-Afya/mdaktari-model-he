@@ -2,6 +2,7 @@
 // import mongoose = require("mongoose");
 import validator = require("validator");
 import timestampPlugin = require("../plugins/timestamp");
+const mongoose_fuzzy_searching = require('mongoose-fuzzy-searching');
 
 const mongoose = module.parent.exports.mongoose;
 
@@ -36,6 +37,7 @@ const userSchema = new mongoose.Schema({
   membershipExpiry: { type: Date },
   quota: { type: Number, min: 0, default: 0 },
   consultsLimit: { type: Number, min: 0, default: 0 },
+  utilization: { type: Number, min: 0, default: 0 },
   // csv start
   fullname: { type: String },
   chartId: { type: String },
@@ -56,5 +58,8 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.plugin(timestampPlugin);
+// userSchema.index({ '$**': 'text' });
+userSchema.plugin(mongoose_fuzzy_searching, { fields: ['firstName', 'lastName', 'email', 'phoneNumber'] });
+
 const User = mongoose.model("User", userSchema);
 export = User;
