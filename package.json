@@ -1,6 +1,6 @@
 {
-  "name": "@Access-Afya/mdaktari-db-models",
-  "version": "1.0.1-beta",
+  "name": "@access-afya/mdaktari-db-models",
+  "version": "1.0.2-beta",
   "description": "An NPM or Github Packages to cater for both doc/patient APIs and admin APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,11 +15,10 @@
     "npm packages",
     "mdaktari"
   ],
-  "author": "Kyalo Kitili",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Access-Afya/mdaktari-db-models.git"
+    "url": "git+ssh://git@github.com/Access-Afya/mdaktari-db-models.git"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
@@ -40,7 +39,14 @@
   "engines": {
     "node": ">=8"
   },
+  "bugs": {
+    "url": "https://github.com/Access-Afya/mdaktari-db-models/issues"
+  },
+  "homepage": "https://github.com/Access-Afya/mdaktari-db-models#readme",
+  "directories": {
+    "test": "test"
+  },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/access-afya"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
