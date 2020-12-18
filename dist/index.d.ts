@@ -1,10 +1,7 @@
-// admin
 export { default as Admin } from "./db/models/admin/Admin";
 export { default as Organization } from "./db/models/admin/Organization";
 export { default as OrganizationAdmin } from "./db/models/admin/OrganizationAdmin";
 export { default as Utilization } from "./db/models/admin/Utilization";
-
-// others
 export { default as Consult } from "./db/models/Consult";
 export { default as Doctor } from "./db/models/Doctor";
 export { default as DoctorProfile } from "./db/models/DoctorProfile";

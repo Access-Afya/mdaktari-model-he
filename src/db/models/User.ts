@@ -1,10 +1,8 @@
-"use strict";
-// import mongoose = require("mongoose");
-import validator = require("validator");
-import timestampPlugin = require("../plugins/timestamp");
-const mongoose_fuzzy_searching = require('mongoose-fuzzy-searching');
+import mongoose from "mongoose";
+import validator from "validator";
+import mongoose_fuzzy_searching from "mongoose-fuzzy-searching";
 
-const mongoose = module.parent.exports.mongoose;
+import timestampPlugin from "../plugins/timestamp";
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -18,7 +16,14 @@ const userSchema = new mongoose.Schema({
   firstName: { type: String },
   lastName: { type: String },
   dateOfBirth: { type: Date },
-  phoneNumber: { type: String, required: true, unique: true, minlength: 13, maxlength: 13, trim: true },
+  phoneNumber: {
+    type: String,
+    required: true,
+    unique: true,
+    minlength: 13,
+    maxlength: 13,
+    trim: true,
+  },
   otpCode: { type: String },
   gender: {
     type: String,
@@ -58,8 +63,11 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.plugin(timestampPlugin);
-// userSchema.index({ '$**': 'text' });
-userSchema.plugin(mongoose_fuzzy_searching, { fields: ['firstName', 'lastName', 'email', 'phoneNumber'] });
 
-const User = mongoose.model("User", userSchema);
-export = User;
+userSchema.plugin(mongoose_fuzzy_searching, {
+  fields: ["firstName", "lastName", "email", "phoneNumber"],
+});
+
+const UserModel = mongoose.model("User", userSchema);
+
+export default UserModel;

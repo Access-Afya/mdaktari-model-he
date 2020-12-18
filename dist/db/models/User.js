@@ -1,22 +1,32 @@
 "use strict";
-// import mongoose = require("mongoose");
-var validator = require("validator");
-var timestampPlugin = require("../plugins/timestamp");
-var mongoose_fuzzy_searching = require('mongoose-fuzzy-searching');
-var mongoose = module.parent.exports.mongoose;
-var userSchema = new mongoose.Schema({
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var mongoose_1 = __importDefault(require("mongoose"));
+var validator_1 = __importDefault(require("validator"));
+var mongoose_fuzzy_searching_1 = __importDefault(require("mongoose-fuzzy-searching"));
+var timestamp_1 = __importDefault(require("../plugins/timestamp"));
+var userSchema = new mongoose_1.default.Schema({
     email: {
         type: String,
         required: false,
         lowercase: true,
         validate: function (value) {
-            return validator.isEmail(value);
+            return validator_1.default.isEmail(value);
         },
     },
     firstName: { type: String },
     lastName: { type: String },
     dateOfBirth: { type: Date },
-    phoneNumber: { type: String, required: true, unique: true, minlength: 13, maxlength: 13, trim: true },
+    phoneNumber: {
+        type: String,
+        required: true,
+        unique: true,
+        minlength: 13,
+        maxlength: 13,
+        trim: true,
+    },
     otpCode: { type: String },
     gender: {
         type: String,
@@ -28,10 +38,10 @@ var userSchema = new mongoose.Schema({
         default: "Active",
     },
     patientProfile: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose_1.default.Schema.Types.ObjectId,
         ref: "PatientProfile",
     },
-    organization: [{ type: mongoose.Schema.Types.ObjectId, ref: "Organization" }],
+    organization: [{ type: mongoose_1.default.Schema.Types.ObjectId, ref: "Organization" }],
     membershipExpiry: { type: Date },
     quota: { type: Number, min: 0, default: 0 },
     consultsLimit: { type: Number, min: 0, default: 0 },
@@ -54,9 +64,10 @@ var userSchema = new mongoose.Schema({
     createdAt: { type: Date },
     updatedAt: { type: Date },
 });
-userSchema.plugin(timestampPlugin);
-// userSchema.index({ '$**': 'text' });
-userSchema.plugin(mongoose_fuzzy_searching, { fields: ['firstName', 'lastName', 'email', 'phoneNumber'] });
-var User = mongoose.model("User", userSchema);
-module.exports = User;
+userSchema.plugin(timestamp_1.default);
+userSchema.plugin(mongoose_fuzzy_searching_1.default, {
+    fields: ["firstName", "lastName", "email", "phoneNumber"],
+});
+var UserModel = mongoose_1.default.model("User", userSchema);
+exports.default = UserModel;
 //# sourceMappingURL=User.js.map

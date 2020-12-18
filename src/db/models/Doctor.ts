@@ -1,9 +1,7 @@
-"use strict";
-// import mongoose = require("mongoose");
-import validator = require("validator");
-import timestampPlugin = require("../plugins/timestamp");
+import mongoose from "mongoose";
+import validator from "validator";
 
-const mongoose = module.parent.exports.mongoose;
+import timestampPlugin from "../plugins/timestamp";
 
 const doctorSchema = new mongoose.Schema({
   email: {
@@ -23,11 +21,6 @@ const doctorSchema = new mongoose.Schema({
     type: String,
     enum: ["Male", "Female", "Other"],
   },
-  // accountType: {
-  //   type: String,
-  //   enum: ['Patient', 'Doctor', 'Admin'],
-  //   default: 'Patient',
-  // },
   accountStatus: {
     type: String,
     enum: ["Active", "Disabled"],
@@ -39,20 +32,16 @@ const doctorSchema = new mongoose.Schema({
     enum: ["Offline", "Online"],
     default: "Offline",
   },
-  // patientProfile: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'PatientProfile',
-  // },
   doctorProfile: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "DoctorProfile",
   },
-  // start doctor profile fields
-  // end doctor profile fields
   createdAt: { type: Date },
   updatedAt: { type: Date },
 });
 
 doctorSchema.plugin(timestampPlugin);
-const Doctor = mongoose.model("Doctor", doctorSchema);
-export = Doctor;
+
+const DoctorModel = mongoose.model("Doctor", doctorSchema);
+
+export default DoctorModel;

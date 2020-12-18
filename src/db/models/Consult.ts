@@ -1,8 +1,6 @@
-"use strict";
-// import mongoose = require("mongoose");
-import timestampPlugin = require("../plugins/timestamp");
+import mongoose from "mongoose";
 
-const mongoose = module.parent.exports.mongoose;
+import timestampPlugin from "../plugins/timestamp";
 
 const consultSchema = new mongoose.Schema({
   patient: {
@@ -14,14 +12,12 @@ const consultSchema = new mongoose.Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Prescription",
-      // index: { unique: true, dropDups: true }, // WARNING: 'dropDups' - but be careful, as this will automatically delete data
     },
   ],
   testOrders: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "TestOrder",
-      // index: { unique: true, dropDups: true }, // WARNING: 'dropDups' - but be careful, as this will automatically delete data
     },
   ],
   doctor: { type: mongoose.Schema.Types.ObjectId, ref: "Doctor" },
@@ -41,7 +37,10 @@ const consultSchema = new mongoose.Schema({
     default: "Cash",
   },
   cashPaymentReceiptNumber: { type: String },
-  billedOrganization: { type: mongoose.Schema.Types.ObjectId, ref: "Organization" },
+  billedOrganization: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Organization",
+  },
   consultStatus: {
     type: String,
     enum: [
@@ -97,5 +96,7 @@ const consultSchema = new mongoose.Schema({
 });
 
 consultSchema.plugin(timestampPlugin);
-const Consult = mongoose.model("Consult", consultSchema);
-export = Consult;
+
+const ConsultModel = mongoose.model("Consult", consultSchema);
+
+export default ConsultModel;

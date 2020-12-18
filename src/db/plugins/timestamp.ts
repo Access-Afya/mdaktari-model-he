@@ -1,4 +1,4 @@
-function timestamp(schema) {
+export default schema => {
   // Create a pre-save hook
   schema.pre("save", function (next) {
     let now = Date.now();
@@ -11,6 +11,4 @@ function timestamp(schema) {
     // Call the next function in the pre-save chain
     next();
   });
-}
-
-export = timestamp;
+};

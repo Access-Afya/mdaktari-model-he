@@ -1,8 +1,6 @@
-"use strict";
-// import mongoose = require("mongoose");
-import timestampPlugin = require("../../plugins/timestamp");
+import mongoose from "mongoose";
 
-const mongoose = module.parent.exports.mongoose;
+import timestampPlugin from "../../plugins/timestamp";
 
 const utilizationSchema = new mongoose.Schema({
   paymentMethod: {
@@ -34,5 +32,7 @@ const utilizationSchema = new mongoose.Schema({
 });
 
 utilizationSchema.plugin(timestampPlugin);
-const Utilization = mongoose.model("Utilization", utilizationSchema);
-export = Utilization;
+
+const UtilizationModel = mongoose.model("Utilization", utilizationSchema);
+
+export default UtilizationModel;
