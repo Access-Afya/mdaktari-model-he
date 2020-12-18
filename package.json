@@ -1,6 +1,6 @@
 {
   "name": "@access-afya/mdaktari-db-models",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0",
   "description": "An NPM or Github Packages to cater for both doc/patient APIs and admin APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
