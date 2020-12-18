@@ -8,13 +8,13 @@ An NPM or Github Package for `mdaktari-db-models' to cater for both doc/patient 
 yarn run build
 ```
 
-## Test pacakge
+## Run tests
 
 ```sh
 yarn test
 ```
 
-## Deploy package
+## Publish package
 
 ```sh
 yarn run deploy

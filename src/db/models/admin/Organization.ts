@@ -1,9 +1,7 @@
-"use strict";
-// import mongoose = require("mongoose");
-import validator = require("validator");
-import timestampPlugin = require("../../plugins/timestamp");
+import mongoose from "mongoose";
+import validator from "validator";
 
-const mongoose = module.parent.exports.mongoose;
+import timestampPlugin from "../../plugins/timestamp";
 
 const organizationSchema = new mongoose.Schema({
   email: {
@@ -28,7 +26,6 @@ const organizationSchema = new mongoose.Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "OrganizationAdmin",
-      // index: { unique: true, dropDups: true }, // WARNING: 'dropDups' - but be careful, as this will automatically delete data
     },
   ],
   aaAdmin: { type: mongoose.Schema.Types.ObjectId, ref: "Admin" },
@@ -37,5 +34,7 @@ const organizationSchema = new mongoose.Schema({
 });
 
 organizationSchema.plugin(timestampPlugin);
-const Organization = mongoose.model("Organization", organizationSchema);
-export = Organization;
+
+const OrganizationModel = mongoose.model("Organization", organizationSchema);
+
+export default OrganizationModel;

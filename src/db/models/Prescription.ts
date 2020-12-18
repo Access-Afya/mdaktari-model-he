@@ -1,8 +1,6 @@
-"use strict";
-// import mongoose = require("mongoose");
-import timestampPlugin = require("../plugins/timestamp");
+import mongoose from "mongoose";
 
-const mongoose = module.parent.exports.mongoose;
+import timestampPlugin from "../plugins/timestamp";
 
 const prescriptionSchema = new mongoose.Schema({
   consultId: { type: mongoose.Schema.Types.ObjectId, ref: "Consult" },
@@ -20,5 +18,7 @@ const prescriptionSchema = new mongoose.Schema({
 });
 
 prescriptionSchema.plugin(timestampPlugin);
-const Prescription = mongoose.model("Prescription", prescriptionSchema);
-export = Prescription;
+
+const PrescriptionModel = mongoose.model("Prescription", prescriptionSchema);
+
+export default PrescriptionModel;

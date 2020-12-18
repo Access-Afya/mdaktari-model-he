@@ -1,9 +1,7 @@
-"use strict";
-// import mongoose = require("mongoose");
-import validator = require("validator");
-import timestampPlugin = require("../../plugins/timestamp");
+import mongoose from "mongoose";
+import validator from "validator";
 
-const mongoose = module.parent.exports.mongoose;
+import timestampPlugin from "../../plugins/timestamp";
 
 const adminSchema = new mongoose.Schema({
   email: {
@@ -33,5 +31,7 @@ const adminSchema = new mongoose.Schema({
 });
 
 adminSchema.plugin(timestampPlugin);
-const Admin = mongoose.model("Admin", adminSchema);
-export = Admin;
+
+const AdminModel = mongoose.model("Admin", adminSchema);
+
+export default AdminModel;
