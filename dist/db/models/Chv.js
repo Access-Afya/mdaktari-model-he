@@ -29,12 +29,6 @@ var chvSchema = new mongoose_1.default.Schema({
         enum: ["Active", "Disabled"],
         default: "Active",
     },
-    // TODO: move this stuff to DoctorProfile
-    workingStatus: {
-        type: String,
-        enum: ["Offline", "Online"],
-        default: "Offline",
-    },
     chvProfile: {
         type: mongoose_1.default.Schema.Types.ObjectId,
         ref: "chvProfile",
@@ -43,6 +37,6 @@ var chvSchema = new mongoose_1.default.Schema({
     updatedAt: { type: Date },
 });
 chvSchema.plugin(timestamp_1.default);
-var DoctorModel = mongoose_1.default.model("CHV", chvSchema);
-exports.default = DoctorModel;
+var ChvModel = mongoose_1.default.model("CHV", chvSchema);
+exports.default = ChvModel;
 //# sourceMappingURL=Chv.js.map
