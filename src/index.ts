@@ -6,6 +6,7 @@ export { default as Utilization } from "./db/models/admin/Utilization";
 
 // others
 export { default as Consult } from "./db/models/Consult";
+export { default as Chv } from "./db/models/Chv";
 export { default as Doctor } from "./db/models/Doctor";
 export { default as DoctorProfile } from "./db/models/DoctorProfile";
 export { default as PatientProfile } from "./db/models/PatientProfile";

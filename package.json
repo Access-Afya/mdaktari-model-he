@@ -1,11 +1,11 @@
 {
   "name": "@access-afya/mdaktari-db-models",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "An NPM or Github Packages to cater for both doc/patient APIs and admin APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha --timeout 60000 -r ts-node/register -r dotenv/config 'tests/**/*.ts'",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha  -R min --timeout 60000 -r ts-node/register -r dotenv/config c'tests/**/*.ts'",
     "build": "tsc"
   },
   "keywords": [

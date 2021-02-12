@@ -12,6 +12,8 @@ exports.Utilization = Utilization_1.default;
 // others
 var Consult_1 = require("./db/models/Consult");
 exports.Consult = Consult_1.default;
+var Chv_1 = require("./db/models/Chv");
+exports.Chv = Chv_1.default;
 var Doctor_1 = require("./db/models/Doctor");
 exports.Doctor = Doctor_1.default;
 var DoctorProfile_1 = require("./db/models/DoctorProfile");
