@@ -26,12 +26,7 @@ const chvSchema = new mongoose.Schema({
     enum: ["Active", "Disabled"],
     default: "Active",
   },
-  // TODO: move this stuff to DoctorProfile
-  workingStatus: {
-    type: String,
-    enum: ["Offline", "Online"],
-    default: "Offline",
-  },
+
   chvProfile: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "chvProfile",
@@ -42,6 +37,6 @@ const chvSchema = new mongoose.Schema({
 
 chvSchema.plugin(timestampPlugin);
 
-const DoctorModel = mongoose.model("CHV", chvSchema);
+const ChvModel = mongoose.model("CHV", chvSchema);
 
-export default DoctorModel;
+export default ChvModel;

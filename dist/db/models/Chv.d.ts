@@ -1,3 +1,3 @@
 import mongoose from "mongoose";
-declare const DoctorModel: mongoose.Model<mongoose.Document, {}>;
-export default DoctorModel;
+declare const ChvModel: mongoose.Model<mongoose.Document, {}>;
+export default ChvModel;
