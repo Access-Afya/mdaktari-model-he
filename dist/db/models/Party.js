@@ -15,11 +15,13 @@ var partySchema = new mongoose_1.Schema({
     email: {
         type: String,
         trim: true,
+        unique: true,
     },
     phoneNumber: {
         type: String,
         required: true,
         trim: true,
+        unique: true,
     },
 }, { timestamps: true });
 // Model
