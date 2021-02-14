@@ -24,6 +24,6 @@ var fileSchema = new mongoose_1.Schema({
     },
 }, { timestamps: true });
 // Model
-var FileModel = mongoose_1.model("Parties", fileSchema);
+var FileModel = mongoose_1.model("File", fileSchema);
 exports.default = FileModel;
 //# sourceMappingURL=File.js.map

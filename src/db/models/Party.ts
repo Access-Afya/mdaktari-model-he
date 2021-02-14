@@ -29,6 +29,6 @@ const partySchema = new Schema(
 );
 
 // Model
-const PartyModel = model("Parties", partySchema);
+const PartyModel = model("Party", partySchema);
 
 export default PartyModel;
