@@ -15,7 +15,7 @@ const fileSchema = new Schema(
       trim: true,
     },
 
-    partyId: {
+    party: {
       type: Schema.Types.ObjectId,
       ref: "Party",
     },

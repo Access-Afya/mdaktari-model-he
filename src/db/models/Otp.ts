@@ -5,7 +5,7 @@ const otpSchema = new Schema(
     phoneNumber: { type: String },
     password: { type: String },
     expiresAt: { type: Date },
-    partyId: {
+    party: {
       type: Schema.Types.ObjectId,
       ref: "Party",
     },

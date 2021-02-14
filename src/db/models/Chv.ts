@@ -16,7 +16,7 @@ const chvSchema = new Schema(
     about: {
       type: String,
     },
-    partyId: {
+    party: {
       type: Schema.Types.ObjectId,
       ref: "Party",
     },
