@@ -5,7 +5,8 @@ var chvSchema = new mongoose_1.Schema({
     dateOfBirth: { type: Date },
     gender: {
         type: String,
-        enum: ["Male", "Female", "Other"],
+        enum: ["MALE", "FEMALE", "OTHER"],
+        set: function (value) { return value.toUpperCase(); },
     },
     accountStatus: {
         type: String,
@@ -14,6 +15,10 @@ var chvSchema = new mongoose_1.Schema({
     },
     about: {
         type: String,
+    },
+    party: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "Party",
     },
     credentials: [
         {

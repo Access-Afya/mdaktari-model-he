@@ -13,7 +13,7 @@ var fileSchema = new mongoose_1.Schema({
         required: true,
         trim: true,
     },
-    partyId: {
+    party: {
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "Party",
     },
