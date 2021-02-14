@@ -2,9 +2,9 @@ import { model, Schema } from "mongoose";
 
 const otpSchema = new Schema(
   {
-    phoneNumber: String,
-    password: String,
-    expiresAt: Date,
+    phoneNumber: { type: String },
+    password: { type: String },
+    expiresAt: { type: Date },
     partyId: {
       type: Schema.Types.ObjectId,
       ref: "Party",
