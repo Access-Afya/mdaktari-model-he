@@ -13,6 +13,6 @@ const otpSchema = new Schema(
   { timestamps: true }
 );
 
-const OtpModel = model("otp", otpSchema);
+const OtpModel = model("Otp", otpSchema);
 
 export default OtpModel;

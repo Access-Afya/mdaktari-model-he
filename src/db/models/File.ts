@@ -30,6 +30,6 @@ const fileSchema = new Schema(
 );
 
 // Model
-const FileModel = model("Parties", fileSchema);
+const FileModel = model("File", fileSchema);
 
 export default FileModel;

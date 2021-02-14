@@ -23,6 +23,6 @@ var partySchema = new mongoose_1.Schema({
     },
 }, { timestamps: true });
 // Model
-var PartyModel = mongoose_1.model("Parties", partySchema);
+var PartyModel = mongoose_1.model("Party", partySchema);
 exports.default = PartyModel;
 //# sourceMappingURL=Party.js.map

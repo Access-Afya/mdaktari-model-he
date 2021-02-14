@@ -10,6 +10,6 @@ var otpSchema = new mongoose_1.Schema({
         ref: "Party",
     },
 }, { timestamps: true });
-var OtpModel = mongoose_1.model("otp", otpSchema);
+var OtpModel = mongoose_1.model("Otp", otpSchema);
 exports.default = OtpModel;
 //# sourceMappingURL=Otp.js.map

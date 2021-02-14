@@ -37,6 +37,6 @@ const chvSchema = new mongoose.Schema({
 
 chvSchema.plugin(timestampPlugin);
 
-const ChvModel = mongoose.model("CHV", chvSchema);
+const ChvModel = mongoose.model("Chv", chvSchema);
 
 export default ChvModel;

@@ -37,6 +37,6 @@ var chvSchema = new mongoose_1.default.Schema({
     updatedAt: { type: Date },
 });
 chvSchema.plugin(timestamp_1.default);
-var ChvModel = mongoose_1.default.model("CHV", chvSchema);
+var ChvModel = mongoose_1.default.model("Chv", chvSchema);
 exports.default = ChvModel;
 //# sourceMappingURL=Chv.js.map
