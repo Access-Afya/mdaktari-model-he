@@ -17,12 +17,14 @@ const partySchema = new Schema(
     email: {
       type: String,
       trim: true,
+      unique: true,
     },
 
     phoneNumber: {
       type: String,
       required: true,
       trim: true,
+      unique: true,
     },
   },
   { timestamps: true }

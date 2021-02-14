@@ -5,7 +5,8 @@ const chvSchema = new Schema(
     dateOfBirth: { type: Date },
     gender: {
       type: String,
-      enum: ["Male", "Female", "Other"],
+      enum: ["MALE", "FEMALE", "OTHER"],
+      set: (value) => value.toUpperCase(),
     },
     accountStatus: {
       type: String,
@@ -14,6 +15,10 @@ const chvSchema = new Schema(
     },
     about: {
       type: String,
+    },
+    partyId: {
+      type: Schema.Types.ObjectId,
+      ref: "Party",
     },
     credentials: [
       {
