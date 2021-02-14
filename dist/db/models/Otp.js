@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = require("mongoose");
 var otpSchema = new mongoose_1.Schema({
-    phoneNumber: String,
-    password: String,
-    expiresAt: Date,
+    phoneNumber: { type: String },
+    password: { type: String },
+    expiresAt: { type: Date },
     partyId: {
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "Party",
