@@ -66,6 +66,7 @@ const consultSchema = new mongoose.Schema({
   doctorNotes: { type: String },
   patientNotes: { type: String },
   consultNotes: { type: String },
+  chvName: { type: String },
   systemicReview: {
     digestiveSystem: {
       stomachPain: { type: Boolean, default: false },
