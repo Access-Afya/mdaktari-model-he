@@ -16,6 +16,7 @@ const userSchema = new mongoose.Schema({
   firstName: { type: String },
   lastName: { type: String },
   dateOfBirth: { type: Date },
+  chvName: { type: String },
   phoneNumber: {
     type: String,
     required: true,
