@@ -69,7 +69,7 @@ var consultSchema = new mongoose_1.default.Schema({
     doctorNotes: { type: String },
     patientNotes: { type: String },
     consultNotes: { type: String },
-    chvName: { type: String },
+    chvCode: { type: String },
     systemicReview: {
         digestiveSystem: {
             stomachPain: { type: Boolean, default: false },
