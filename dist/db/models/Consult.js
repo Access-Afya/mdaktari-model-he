@@ -88,7 +88,7 @@ var consultSchema = new mongoose_1.default.Schema({
             bloodInSputum: { type: Boolean, default: false },
             whizzingSoundWhenBreathing: { type: Boolean, default: false },
         },
-        cardioVascularSystem: {
+        cardiovascularSystem: {
             chestPain: { type: Boolean, default: false },
             palpitations: { type: Boolean, default: false },
             dyspnoea: { type: Boolean, default: false },
