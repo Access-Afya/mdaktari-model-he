@@ -69,14 +69,14 @@ const consultSchema = new mongoose.Schema({
   chvCode: { type: String },
   systemicReview: {
     vitals: {
-      heartRate: { type: String, default: false },
-      systolicBP: { type: String, default: false },
-      diastolicBP: { type: String, default: false },
-      bloodSugar: { type: String, default: false },
-      height: { type: String, default: false },
-      weight: { type: String, default: false },
-      bmi: { type: String, default: false },
-      waistCircumference: { type: String, default: false },
+      heartRate: { type: String, default: null },
+      systolicBP: { type: String, default: null },
+      diastolicBP: { type: String, default: null },
+      bloodSugar: { type: String, default: null },
+      height: { type: String, default: null },
+      weight: { type: String, default: null },
+      bmi: { type: String, default: null },
+      waistCircumference: { type: String, default: null },
     },
     respiratorySystem: {
       chestPain: { type: Boolean, default: false },
