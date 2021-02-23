@@ -71,12 +71,12 @@ const consultSchema = new mongoose.Schema({
     vitalsSystem: {
       heartRate: { type: String },
       systolicBP: { type: String },
-      Diastolic: { type: String },
-      Blood: { type: String },
+      diastolic: { type: String },
+      blood: { type: String },
       sugarHeight: { type: String },
-      Weight: { type: String },
-      BMIWaist: { type: String },
-      circumference: { type: String },
+      weight: { type: String },
+      bmi: { type: String },
+      waistCircumference: { type: String },
     },
     respiratorySystem: {
       chestPain: { type: Boolean, default: false },
