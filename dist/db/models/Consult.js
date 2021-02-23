@@ -74,9 +74,9 @@ var consultSchema = new mongoose_1.default.Schema({
         vitalsSystem: {
             heartRate: { type: String },
             systolicBP: { type: String },
-            diastolic: { type: String },
-            blood: { type: String },
-            sugarHeight: { type: String },
+            diastolicBP: { type: String },
+            bloodSugar: { type: String },
+            height: { type: String },
             weight: { type: String },
             bmi: { type: String },
             waistCircumference: { type: String },
