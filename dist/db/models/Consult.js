@@ -151,7 +151,8 @@ var consultSchema = new mongoose_1.default.Schema({
             weakness: { type: Boolean, default: false },
             paralysis: { type: Boolean, default: false },
             involuntaryMovements: { type: Boolean, default: false },
-            visionChangesHeadInjury: { type: Boolean, default: false },
+            visionChanges: { type: Boolean, default: false },
+            headInjury: { type: Boolean, default: false },
         },
         entSystem: {
             hearingDifficulty: { type: Boolean, default: false },
