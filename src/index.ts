@@ -17,3 +17,5 @@ export { default as Payment } from "./db/models/Payment";
 export { default as Prescription } from "./db/models/Prescription";
 export { default as TestOrder } from "./db/models/TestOrder";
 export { default as User } from "./db/models/User";
+export { default as Che } from "./db/models/Che";
+export { default as ICDCode } from "./db/models/ICDCode";
