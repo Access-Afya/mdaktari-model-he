@@ -2,9 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = require("mongoose");
 var icdCodeSchema = new mongoose_1.Schema({
-    id: {
-        type: Number,
-    },
     "ICD-10-CM CODE DESCRIPTION": {
         type: String,
         alias: "description",

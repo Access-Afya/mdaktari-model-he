@@ -2,9 +2,6 @@
 import { Schema, model } from "mongoose";
 
 const icdCodeSchema = new Schema({
-  id: {
-    type: Number,
-  },
   "ICD-10-CM CODE DESCRIPTION": {
     type: String,
     alias: "description",
