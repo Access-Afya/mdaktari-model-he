@@ -6,6 +6,10 @@ var icdCodeSchema = new mongoose_1.Schema({
         type: String,
         alias: "description",
     },
+    "ICD-10": {
+        type: String,
+        alias: "icd",
+    },
 });
 var ICDCodeModel = mongoose_1.model("ICDCode", icdCodeSchema, "src_icd_codes");
 exports.default = ICDCodeModel;

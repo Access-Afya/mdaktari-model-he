@@ -6,6 +6,10 @@ const icdCodeSchema = new Schema({
     type: String,
     alias: "description",
   },
+  "ICD-10": {
+    type: String,
+    alias: "icd",
+  },
 });
 
 const ICDCodeModel = model("ICDCode", icdCodeSchema, "src_icd_codes");
