@@ -40,6 +40,8 @@ const userSchema = new mongoose.Schema({
     ref: "PatientProfile",
   },
   organization: [{ type: mongoose.Schema.Types.ObjectId, ref: "Organization" }],
+  limitsPerVisit: { type: Number, min: 0, default: 0 },
+  maxVisits: { type: Number, min: 1 },
   membershipExpiry: { type: Date },
   quota: { type: Number, min: 0, default: 0 },
   consultsLimit: { type: Number, min: 0, default: 0 },
